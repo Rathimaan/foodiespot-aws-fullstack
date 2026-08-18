@@ -25,5 +25,13 @@ services:
       - backend
     restart: always
 
+  admin:
+    build: ./admin
+    ports:
+      - "5174:80"
+    depends_on:
+      - backend
+    restart: always
+
 volumes:
   backend-uploads:
